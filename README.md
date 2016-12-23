@@ -1,4 +1,4 @@
-# date-test-helpers
+# date-test-helpers [![Build Status](https://travis-ci.org/goodeggs/date-test-helpers.svg?branch=master)](https://travis-ci.org/goodeggs/date-test-helpers)
 
 **Create [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) objects out of strings represented in common American timezones.** The intention of this module is for it to be used to create stub test data, not for it to be used in production code, but, y'know, do what you want.
 
