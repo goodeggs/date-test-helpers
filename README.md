@@ -5,12 +5,12 @@
 ### Example
 
 ```js
-import {pacific} from 'date-test-helpers';
+import dateTestHelpers from 'date-test-helpers';
 
-console.log(pacific.startOfDay('1954-08-02'))
+console.log(dateTestHelpers.pacific.startOfDay('1954-08-02'))
 /* output: Sun Aug 02 1954 00:00:00 GMT-0700 (PDT) */
 
-console.log(pacific.time('2016-04-02 14:00:00'))
+console.log(dateTestHelpers.pacific.time('2016-04-02 14:00:00'))
 /* output: Sat Apr 02 2016 14:00:00 GMT-0700 (PDT) */
 ```
 
