@@ -22,6 +22,13 @@ describe('date-test-helpers', function () {
         argument: '2016-04-02 14:00:00',
         expected: new Date('2016-04-02T14:00:00.000Z'),
       });
+
+      testForTimezone({
+        helper: 'utc',
+        fn: 'preciseTime',
+        argument: '2016-04-02 14:00:00.999',
+        expected: new Date('2016-04-02T14:00:00.999Z'),
+      });
     });
 
     describe('eastern', function () {
@@ -37,6 +44,13 @@ describe('date-test-helpers', function () {
         fn: 'time',
         argument: '2016-04-02 14:00:00',
         expected: new Date('2016-04-02T18:00:00.000Z'),
+      });
+
+      testForTimezone({
+        helper: 'eastern',
+        fn: 'preciseTime',
+        argument: '2016-04-02 14:00:00.999',
+        expected: new Date('2016-04-02T18:00:00.999Z'),
       });
     });
 
@@ -54,6 +68,13 @@ describe('date-test-helpers', function () {
         argument: '2016-04-02 14:00:00',
         expected: new Date('2016-04-02T19:00:00.000Z'),
       });
+
+      testForTimezone({
+        helper: 'central',
+        fn: 'preciseTime',
+        argument: '2016-04-02 14:00:00.999',
+        expected: new Date('2016-04-02T19:00:00.999Z'),
+      });
     });
 
     describe('mountain', function () {
@@ -70,6 +91,13 @@ describe('date-test-helpers', function () {
         argument: '2016-04-02 14:00:00',
         expected: new Date('2016-04-02T21:00:00.000Z'),
       });
+
+      testForTimezone({
+        helper: 'mountain',
+        fn: 'preciseTime',
+        argument: '2016-04-02 14:00:00.999',
+        expected: new Date('2016-04-02T21:00:00.999Z'),
+      });
     });
 
     describe('pacific', function () {
@@ -85,6 +113,13 @@ describe('date-test-helpers', function () {
         fn: 'time',
         argument: '2016-04-02 14:00:00',
         expected: new Date('2016-04-02T21:00:00.000Z'),
+      });
+
+      testForTimezone({
+        helper: 'pacific',
+        fn: 'preciseTime',
+        argument: '2016-04-02 14:00:00.999',
+        expected: new Date('2016-04-02T21:00:00.999Z'),
       });
     });
   });

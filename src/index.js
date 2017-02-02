@@ -14,11 +14,12 @@ function tzHelper (timezone: string) {
   return {
     startOfDay: timeParser('YYYY-MM-DD', timezone),
     time: timeParser('YYYY-MM-DD HH:mm:ss', timezone),
+    preciseTime: timeParser('YYYY-MM-DD HH:mm:ss.SSS', timezone),
   };
 }
 
 function timeParser (format: string, timezone: string) {
-  const regexp = new RegExp(`^${format.replace(/[YMDHms]/g, '\\d')}$`);
+  const regexp = new RegExp(`^${format.replace(/[YMDHmsS]/g, '\\d')}$`);
 
   return function (input: string) {
     if (!regexp.test(input)) {
