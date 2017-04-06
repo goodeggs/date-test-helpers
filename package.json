@@ -2,10 +2,10 @@
   "name": "date-test-helpers",
   "version": "1.1.1",
   "description": "Create Date objects out of strings represented in common American timezones.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "rm -rf build/ && babel src -d build && cp package.json build/",
-    "postpublish": "npm cache clean",
+    "build": "rm -rf lib/ && babel src -d lib",
+    "prepublish": "npm run build",
     "lint": "eslint .",
     "test:mocha": "NODE_ENV=test mocha --compilers=js:babel-register --require=babel-polyfill",
     "test": "yarn run lint && flow && yarn run test:mocha"
