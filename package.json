@@ -8,7 +8,7 @@
     "postpublish": "npm cache clean",
     "lint": "eslint .",
     "test:mocha": "NODE_ENV=test mocha --compilers=js:babel-register --require=babel-polyfill",
-    "test": "npm run lint && flow && npm run test:mocha"
+    "test": "yarn run lint && flow && yarn run test:mocha"
   },
   "keywords": [],
   "author": "Good Eggs Inc.",
@@ -48,6 +48,9 @@
       "transform-flow-strip-types",
       "add-module-exports"
     ]
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "eslintConfig": {
     "plugins": [

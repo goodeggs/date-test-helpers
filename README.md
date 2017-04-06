@@ -40,5 +40,5 @@ I aim to keep this module very small and single-purpose. If you find a bug, plea
 You can run tests with:
 
 ```
-npm test
+yarn test
 ```
