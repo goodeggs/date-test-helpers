@@ -2,3 +2,14 @@ language: node_js
 node_js:
 - '4'
 - '6'
+cache:
+  yarn: true
+  directories:
+    - "/home/travis/.npm"
+    - /tmp/ci-tools
+env:
+  global:
+    - PATH="/tmp/ci-tools:./node_modules/.bin/:$PATH"
+before_install: curl -sSL https://github.com/goodeggs/travis-utils/raw/master/install-ci-tools.sh | CACHE_DIR=/tmp/ci-tools sh -s -- yarn=0.19.0
+install: yarn install
+test: yarn test
