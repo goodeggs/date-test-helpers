@@ -1,6 +1,6 @@
 {
   "name": "date-test-helpers",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Create Date objects out of strings represented in common American timezones.",
   "main": "index.js",
   "scripts": {
