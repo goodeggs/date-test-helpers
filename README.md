@@ -30,6 +30,7 @@ Each object contains the following methods:
 
 * `startOfDay('YYYY-MM-DD'): Date`
 * `time('YYYY-MM-DD HH:mm:ss'): Date`
+* `preciseTime('YYYY-MM-DD HH:mm:ss.SSS'): Date`
 
 Passing in a string with any other format will throw a `TypeError`. Hours should be represented using 24-hour (military) time. All parsing and timezone math is handled by the comprehensive [moment.js](http://momentjs.com/timezone/) library.
 
